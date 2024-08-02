@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/573ce9794b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h2>
+                    PHANEENDRA VEERA BRAHMA CHARI. CHANDRAGIRI
+                </h2>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Java Developer</p>
+                <h1>Hi, I'm <span>Phaneendra</span></h1>
+            </div>
+        </div>
+    </div>
+<!-------------------------------------------about----------------------------------------------------------->
+    <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/Phaeendra.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Looking for an entry-level position in the field of
+                        IT, to work in an innovative and challenging job to expose
+                        my talent and to prove my ability to undertake job responsibilities.
+                        And I wish to contribute to a dynamicteam of individuals motivated 
+                        to achieve the company's goal while aiding my personal growth.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Technologies</span><br>Java, JDBC, Servlets</li>
+                                <li><span>Web Technologies</span><br>Html, CSS</li>
+                                <li><span>Database</span><br>MySQL</li>
+                                <li><span>Software-Tools</span><br>Eclipse IDE EE, MySQL Workbench 8.0, VS Code</li>
+                                <li><span>Servers</span><br>Tomcat 9</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br>ST. Mary's Group of Institutions, Guntur affiliated to JNTUK.</li>
+                                <li><span>2019</span><br>Higher Education from NRI Jr College, Tenali.</li>
+                                <li><span>2017</span><br>SSC from Ravindra Bharathi EM School, Tenali.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+<!---------------------------------------projects---------------------------------------------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Food delivery</h2>
+                    <h3><b>Software</b> : Java 8</h3>
+                    <p>
+                        Food delivery is a project about basic online food service paltform.
+                        We developed our project using OOPS concepts. Here we satisfied all oops concepts 
+                        like inheritance, encapsulation etc..
+                         And for payment option we used online transaction 
+                        service like phonepay and UPI services also. Here for payment option we developed a 
+                        code based on java concepts,which is doesn't like real-world online payment services.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <i class="fa-brands fa-bluetooth-b"></i>
+                    <h2>Voice Recognition Based Home Automation and Security System</h2>
+                    <h3><b>Hardware Compents</b>: Bluettoth Module, Relay, DC motor, Arduino Nano</h3>
+                    <p>
+                        This projects helps us to control all the home appliances  by using smartphone 
+                        through our voice. Our project provide the security system for home in the 
+                        absence of owner. It helps us to save time and manpower. 
+                        Here we can control 
+                        home appliances through voice using keywords like "Light ON", "Fan ON", etc.. 
+                        and to stop "ALL OFF". In future this projects is very useful for mankind and there
+                        is high possibilities to develope in wide range. Now-a-days this projects is in use, in many 
+                        hotles and malls etc.. for security purpose and to save time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------------------------------protfolio---------------------------------------------------->
+<!----------------------------------Conatact-------------------------------------------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h2 class="sub-title">Contact Info</h2>
+                        <p><i class="fa-solid fa-envelope"></i>phaneendra8897@gmail.com</p>
+                        <p><i class="fa-brands fa-whatsapp"></i>9392502477</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/phaneendra-veera-brahma-chari-chandragiri-563033237"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="images/Phaneendra Veera Brahma Chari .pdf" class="btn">My Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+
+                sidemenu.style.right="0";
+        }
+        function closemenu(){
+            
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+    </script>
+
+</body>
+</html>
